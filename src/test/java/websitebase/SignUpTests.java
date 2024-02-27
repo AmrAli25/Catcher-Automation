@@ -16,7 +16,7 @@ public class SignUpTests extends BaseTest {
 
         String firstName = "Amr";
         String lastName = "Ali";
-        String email = randomEmail();
+        String email = randomEmailByTime();
         String password = "123456789a";
 
         signUpPage.enterSignUpCredentials(firstName, lastName, email, password);
@@ -24,7 +24,7 @@ public class SignUpTests extends BaseTest {
         otpPage.enterOtp("1234");
         var profilePage = homePage.clickProfilePage();
         profilePage.clickSignOut();
-         boolean flag = homePage.checkSignOut();
-        assertTrue(flag, "Something went wrong");
+         boolean icon = homePage.checkSignInIcon();
+        assertTrue(icon, "Something went wrong");
     }
 }
