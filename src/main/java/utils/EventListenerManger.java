@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -25,7 +26,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
-        System.out.println("There have been an error: " + e.getMessage());
+        System.out.println("Failed to do the action: " + args[0].toString());
         WebDriverListener.super.onError(target, method, args, e);
     }
 
@@ -41,7 +42,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeGet(WebDriver driver, String url) {
-        System.out.println("Opening the url: " + url);
+        System.out.println("Opening url: " + url);
         WebDriverListener.super.beforeGet(driver, url);
     }
 
@@ -72,7 +73,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeFindElement(WebDriver driver, By locator) {
-        System.out.println("Trying to find the element: " + locator.toString());
+        System.out.println("finding element by: " + locator.toString());
         WebDriverListener.super.beforeFindElement(driver, locator);
     }
 
@@ -119,6 +120,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void afterQuit(WebDriver driver) {
+        System.out.println("Successfully closed the browser");
         WebDriverListener.super.afterQuit(driver);
     }
 
@@ -144,6 +146,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeExecuteScript(WebDriver driver, String script, Object[] args) {
+        System.out.println("Executing a javascript query:" + script);
         WebDriverListener.super.beforeExecuteScript(driver, script, args);
     }
 
@@ -164,6 +167,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforePerform(WebDriver driver, Collection<Sequence> actions) {
+//        actions.forEach(sequence -> System.out.println("Doing action:" + sequence.toString()));
         WebDriverListener.super.beforePerform(driver, actions);
     }
 
@@ -215,6 +219,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeSendKeys(WebElement element, CharSequence... keysToSend) {
+        System.out.println("Typing: " + Arrays.toString(keysToSend));
         WebDriverListener.super.beforeSendKeys(element, keysToSend);
     }
 
@@ -285,6 +290,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeFindElement(WebElement element, By locator) {
+
         WebDriverListener.super.beforeFindElement(element, locator);
     }
 

@@ -23,15 +23,14 @@ public class BaseTest {
     @BeforeClass
     public void setUp(){
         driver = createWebDriverWithListener(new ChromeDriver(getChromeOptions()));
-        goToHomePage();
-        homePage = new HomePage(driver);
 
-
+        homePage = goToHomePage();
     }
 
-    @BeforeMethod
-    public void goToHomePage(){
+
+    public HomePage goToHomePage(){
         driver.get("https://staging.catcher.sa/en");
+        return new HomePage(driver);
     }
 
     @AfterClass

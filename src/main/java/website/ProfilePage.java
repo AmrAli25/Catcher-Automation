@@ -2,8 +2,11 @@ package website;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
+
+import static utils.Helper.explicitWait;
 
 public class ProfilePage {
 
@@ -12,7 +15,6 @@ public class ProfilePage {
     private By lastName = By.id("lname");
     private By email = By.id("email");
     private By signOutBtn = By.cssSelector("a[title='Sign out']");
-    private By editBtn = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section/div/div/div[2]/div/div/div/div");
 
     public ProfilePage(WebDriver driver) {
         this.driver = driver;
@@ -21,17 +23,16 @@ public class ProfilePage {
 
 
     public String getFirstName(){
-        return driver.findElement(firstName).getText();
+        return driver.findElement(firstName).getAttribute("value");
     }
     public String getLastName(){
-        return driver.findElement(lastName).getText();
+        return driver.findElement(lastName).getAttribute("value");
     }
     public String getEmail(){
-        return driver.findElement(email).getText();
+        return driver.findElement(email).getAttribute("value");
     }
-    public SignInPage clickSignOut(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+    public void clickSignOut(){
+       explicitWait(driver,1).until(ExpectedConditions.elementToBeClickable(signOutBtn));
         driver.findElement(signOutBtn).click();
-        return new SignInPage(driver);
     }
 }
