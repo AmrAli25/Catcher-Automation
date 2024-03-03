@@ -33,6 +33,7 @@ public class SignInPage {
     public HomePage clickLoginButton(){
         explicitWait(driver,5).until(ExpectedConditions.elementToBeClickable(loginBtn));
         driver.findElement(loginBtn).click();
+        explicitWait(driver,10).until(ExpectedConditions.urlToBe("https://staging.catcher.sa/en"));
         return new HomePage(driver);
     }
 

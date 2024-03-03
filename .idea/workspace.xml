@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Create som utils class like (WindowManger, EventListenerManger)">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/websitebase/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/EventListenerManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/EventListenerManger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,18 +60,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.LoginTests.testAddToWishList.executor": "Debug",
+    "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
+    "TestNG.LoginTests.testAddToWishList.executor": "Run",
+    "TestNG.SignUpTests.executor": "Run",
     "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
     "TestNG.TitleTest.getPageTitle.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Volumes/Data/Amr's Projects/Catcher-Automation",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "zielu.gittoolbox.app.config.v2"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTests.testAddToWishList">
-    <configuration name="LoginTests.testAddToWishList" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SignUpTests">
+    <configuration name="AddToWishListTests.testAddToWishList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
         <pattern>
@@ -86,9 +82,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="websitebase" />
-      <option name="MAIN_CLASS_NAME" value="websitebase.LoginTests" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.AddToWishListTests" />
       <option name="METHOD_NAME" value="testAddToWishList" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignUpTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Catcher-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="websitebase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="websitebase" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.SignUpTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,7 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTests.testAddToWishList" />
+        <item itemvalue="TestNG.SignUpTests" />
+        <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
         <item itemvalue="TestNG.TitleTest.getPageTitle" />
       </list>
@@ -190,16 +204,5 @@
     <MESSAGE value="Catcher an ecommerce website" />
     <MESSAGE value="Create som utils class like (WindowManger, EventListenerManger)" />
     <option name="LAST_COMMIT_MESSAGE" value="Create som utils class like (WindowManger, EventListenerManger)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/websitebase/LoginTests.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
