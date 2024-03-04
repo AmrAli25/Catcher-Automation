@@ -1,8 +1,9 @@
 package websitebase;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class AddToWishListTests extends BaseTest{
 
@@ -16,7 +17,12 @@ public class AddToWishListTests extends BaseTest{
         loginPage.clickLoginButton();
         homePage.addToWishList();
         var wishListPage = homePage.clickWishListBtn();
-//        assertTrue(wishListPage.checkProductPresence(),"Product isn't in the wishlist");
         assertEquals(wishListPage.getProductName(),"Cheap product ", "Product wasn't added to the wishlist");
+    }
+
+    @AfterMethod
+    private void removeProductFromWishList(){
+        var wishListPage = homePage.clickWishListBtn();
+        wishListPage.toggleFavBtn();
     }
 }

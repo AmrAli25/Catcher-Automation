@@ -1,10 +1,6 @@
 package websitebase;
 
-import org.checkerframework.dataflow.qual.AssertMethod;
-import org.testng.IReporter;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Create som utils class like (WindowManger, EventListenerManger)">
+      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,7 +50,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -60,7 +66,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
+    "TestNG.AddToWishListTests.executor": "Debug",
+    "TestNG.AddToWishListTests.testAddToWishList.executor": "Debug",
     "TestNG.LoginTests.testAddToWishList.executor": "Run",
     "TestNG.SignUpTests.executor": "Run",
     "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
@@ -69,10 +76,39 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Volumes/Data/Amr's Projects/Catcher-Automation",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "settings.codegpt"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SignUpTests">
+  <component name="QodanaCloudProjectLink">
+    <option name="lastReportId" value="Le5Jj" />
+    <option name="linkedProjectId" value="p96wN" />
+    <option name="linkedProjectName" value="Catcher-Automation" />
+    <option name="organizationId" value="pQWOr" />
+    <option name="userId" value="p0B4x" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/57/43__6nxj1hb44xdkzst20rxw0000gn/T/qodana_output1/qodana.sarif.json" reportGuid="ae3ff230-ae59-426e-a640-6847125db184" reportId="Catcher-Automation/qodana/2024-03-03" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.AddToWishListTests.testAddToWishList">
+    <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Catcher-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="websitebase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="websitebase" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.AddToWishListTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddToWishListTests.testAddToWishList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -146,8 +182,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SignUpTests" />
         <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
+        <item itemvalue="TestNG.AddToWishListTests" />
+        <item itemvalue="TestNG.SignUpTests" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
         <item itemvalue="TestNG.TitleTest.getPageTitle" />
       </list>
@@ -204,5 +241,16 @@
     <MESSAGE value="Catcher an ecommerce website" />
     <MESSAGE value="Create som utils class like (WindowManger, EventListenerManger)" />
     <option name="LAST_COMMIT_MESSAGE" value="Create som utils class like (WindowManger, EventListenerManger)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
