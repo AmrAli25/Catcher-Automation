@@ -1,11 +1,13 @@
 package websitebase;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+
 public class SignUpTests extends BaseTest {
+    SoftAssert softAssert = new SoftAssert();
 
 
     @Test(testName = "Sign up and check the data in the profile page then logout")
@@ -23,11 +25,12 @@ public class SignUpTests extends BaseTest {
         otpPage.enterOtp("1234");
 
         var profilePage = homePage.clickProfilePage();
-        assertEquals(profilePage.getEmail(), email, "Wrong email address");
-        assertEquals(profilePage.getFirstName(), firstName, "Wrong first name ");
-        assertEquals(profilePage.getLastName(), lastName, "Wrong last name ");
+        softAssert.assertEquals(profilePage.getEmail(), email, "Wrong email address");
+        softAssert.assertEquals(profilePage.getFirstName(), firstName, "Wrong first name ");
+        softAssert.assertEquals(profilePage.getLastName(), lastName, "Wrong last name ");
         profilePage.clickSignOut();
          boolean icon = homePage.checkSignInIcon();
         assertTrue(icon, "Something went wrong");
+        softAssert.assertAll();
     }
 }

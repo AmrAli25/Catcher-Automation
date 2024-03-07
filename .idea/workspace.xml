@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Create som utils class like (WindowManger, EventListenerManger)">
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Creating a cleanup to run afterMethod in wishlist test">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
@@ -26,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="XML Properties File" />
       </list>
     </option>
   </component>
@@ -63,11 +66,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.Catcher-Automation [package].executor": "Run",
+    "Maven.Catcher-Automation [test].executor": "Run",
+    "Maven.Catcher-Automation [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.AddToWishListTests.executor": "Debug",
-    "TestNG.AddToWishListTests.testAddToWishList.executor": "Debug",
+    "TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml.executor": "Run",
+    "TestNG.AddToWishListTests.executor": "Run",
+    "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
+    "TestNG.BaseTest.testRelativeLocators.executor": "Run",
     "TestNG.LoginTests.testAddToWishList.executor": "Run",
     "TestNG.SignUpTests.executor": "Run",
     "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
@@ -76,7 +84,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Volumes/Data/Amr's Projects/Catcher-Automation",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.codegpt"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="QodanaCloudProjectLink">
@@ -91,7 +99,7 @@
       <ReportDescription localRun="true" path="/private/var/folders/57/43__6nxj1hb44xdkzst20rxw0000gn/T/qodana_output1/qodana.sarif.json" reportGuid="ae3ff230-ae59-426e-a640-6847125db184" reportId="Catcher-Automation/qodana/2024-03-03" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.AddToWishListTests.testAddToWishList">
+  <component name="RunManager" selected="TestNG.AddToWishListTests">
     <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -127,6 +135,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BaseTest.testRelativeLocators" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Catcher-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="websitebase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="websitebase" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.BaseTest" />
+      <option name="METHOD_NAME" value="testRelativeLocators" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignUpTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -144,36 +170,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTests.successfulSignupAndSignOut" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="websitebase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="websitebase" />
-      <option name="MAIN_CLASS_NAME" value="websitebase.SignUpTests" />
-      <option name="METHOD_NAME" value="successfulSignupAndSignOut" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TitleTest.getPageTitle" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Catcher-Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dashboardbase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="base" />
-      <option name="MAIN_CLASS_NAME" value="dashboardbase.TitleTest" />
-      <option name="METHOD_NAME" value="getPageTitle" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/websitebase/test.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.AddToWishListTests" />
+        <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
+        <item itemvalue="TestNG.BaseTest.testRelativeLocators" />
+        <item itemvalue="TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml" />
         <item itemvalue="TestNG.SignUpTests" />
-        <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
-        <item itemvalue="TestNG.TitleTest.getPageTitle" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709022176521</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating a cleanup to run afterMethod in wishlist test">
+      <option name="closed" value="true" />
+      <created>1709571724644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709571724644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,17 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Catcher an ecommerce website" />
     <MESSAGE value="Create som utils class like (WindowManger, EventListenerManger)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create som utils class like (WindowManger, EventListenerManger)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Creating a cleanup to run afterMethod in wishlist test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating a cleanup to run afterMethod in wishlist test" />
   </component>
 </project>

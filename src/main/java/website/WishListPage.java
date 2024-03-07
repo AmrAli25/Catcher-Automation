@@ -17,7 +17,7 @@ public class WishListPage {
     public WishListPage(WebDriver driver) {
         this.driver = driver;
     }
-    private By product = By.xpath("//a[@title='Cheap product ']");
+    private By product = By.xpath("//a[@title='Updating Testing 42']");
     private By wishlistProducts = By.cssSelector("div[class='row g-2']");
     private By FavBtn = By.xpath("//div[@class='cardMain-header-fav']");
 
