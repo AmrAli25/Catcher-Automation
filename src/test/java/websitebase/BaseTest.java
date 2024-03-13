@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 import utils.EventListenerManger;
 import website.HomePage;
 
@@ -36,10 +35,10 @@ public class BaseTest {
         driver.quit();
     }
 
-    @Test
-    public void testRelativeLocators(){
-        homePage.getPaymentMethodsFromFooter();
-    }
+//    @Test                              // this for testing relative locators using selenium 4
+//    public void testRelativeLocators(){
+//        homePage.getPaymentMethodsFromFooter();
+//    }
 
     // Create a random mail using current time signature
     public String randomEmailByTime(){

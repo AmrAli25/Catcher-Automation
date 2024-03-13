@@ -29,7 +29,7 @@ public class SignUpTests extends BaseTest {
         softAssert.assertEquals(profilePage.getFirstName(), firstName, "Wrong first name ");
         softAssert.assertEquals(profilePage.getLastName(), lastName, "Wrong last name ");
         profilePage.clickSignOut();
-         boolean icon = homePage.checkSignInIcon();
+        boolean icon = homePage.checkSignInIcon();
         assertTrue(icon, "Something went wrong");
         softAssert.assertAll();
     }
