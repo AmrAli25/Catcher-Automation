@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Fix: adding to wishlist and catch the error &amp; using relative locators &amp; use a helper utils to highlight the buttons">
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,30 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.Catcher-Automation [package].executor": "Run",
-    "Maven.Catcher-Automation [test].executor": "Run",
-    "Maven.Catcher-Automation [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml.executor": "Run",
-    "TestNG.AddToWishListTests.executor": "Run",
-    "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
-    "TestNG.AddToWishListTests.testCheckProductPresence.executor": "Run",
-    "TestNG.BaseTest.testRelativeLocators.executor": "Run",
-    "TestNG.LoginTests.testAddToWishList.executor": "Run",
-    "TestNG.SignUpTests.executor": "Run",
-    "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
-    "TestNG.TitleTest.getPageTitle.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Volumes/Data/Amr's Projects/Catcher-Automation",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.Catcher-Automation [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Catcher-Automation [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Catcher-Automation [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AddToWishListTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AddToWishListTests.testAddToWishList.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AddToWishListTests.testCheckProductPresence.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BaseTest.testRelativeLocators.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.testAddToWishList.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignUpTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignUpTests.successfulSignupAndSignOut.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TitleTest.getPageTitle.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Data/Amr's Projects/Catcher-Automation&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="QodanaCloudProjectLink">
     <option name="lastReportId" value="Le5Jj" />
     <option name="linkedProjectId" value="p96wN" />
@@ -92,7 +87,7 @@
     <option name="organizationId" value="pQWOr" />
     <option name="userId" value="p0B4x" />
   </component>
-  <component name="RunManager" selected="TestNG.AddToWishListTests">
+  <component name="RunManager" selected="TestNG.AddToWishListTests.testAddToWishList">
     <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -183,9 +178,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
+        <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.SignUpTests" />
         <item itemvalue="TestNG.AddToWishListTests.testCheckProductPresence" />
       </list>
@@ -240,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709826031517</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage">
+      <option name="closed" value="true" />
+      <created>1710335970352</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710335970352</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,17 +262,7 @@
     <MESSAGE value="Create som utils class like (WindowManger, EventListenerManger)" />
     <MESSAGE value="Creating a cleanup to run afterMethod in wishlist test" />
     <MESSAGE value="Fix: adding to wishlist and catch the error &amp; using relative locators &amp; use a helper utils to highlight the buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: adding to wishlist and catch the error &amp; using relative locators &amp; use a helper utils to highlight the buttons" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage" />
   </component>
 </project>

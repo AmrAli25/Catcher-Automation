@@ -17,9 +17,9 @@ public class HomePage {
     private final By loginBtn = By.cssSelector("a[title=\"Login\"]");
     private final By profileBtn = By.cssSelector("a[title='Profile']");
     private final By product = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[7]/div/div[3]/div/div[1]/div[3]/div/a");
-    private final By wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[3]/div/div/div[3]/div/div[1]/div[3]"); // xpath for product heart
     private final By wishListBtn = By.xpath("//a[@title='Wishlist']");
     private final By topPage = By.cssSelector("section[class='pt-2xl']");
+    private By wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[3]/div/div/div[3]/div/div[1]/div[2]"); // xpath for product heart
 
 
     public HomePage(WebDriver driver) {
@@ -55,6 +55,7 @@ public class HomePage {
         scrollToElement(driver.findElement(product));
         highlightElement(driver, driver.findElement(product));
         explicitWait(driver, 5).until(ExpectedConditions.elementToBeClickable(product));
+        wishListBtnForProduct = offerLableCheck(wishListBtnForProduct);
         highlightElement(driver, driver.findElement(wishListBtnForProduct));
         driver.findElement(wishListBtnForProduct).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -70,6 +71,16 @@ public class HomePage {
 
     private void clickElement(By element) {
         driver.findElement(element).click();
+    }
+
+    private By offerLableCheck(By wishListBtnForProduct) {
+        String text = driver.findElement(wishListBtnForProduct).getText();
+        if (text.contains("% Off")) {
+            wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[3]/div/div/div[3]/div/div[1]/div[3]");
+            return wishListBtnForProduct;
+        }
+        else
+            return wishListBtnForProduct;
     }
 
     // this a test to use the relative locators in selenium 4 with footer

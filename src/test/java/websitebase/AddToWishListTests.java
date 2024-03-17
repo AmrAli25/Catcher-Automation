@@ -27,7 +27,7 @@ public class AddToWishListTests extends BaseTest {
     }
 
     @AfterMethod
-    public void CleanWishList(){
+    public void cleanWishList(){
         goToHomePage();
         var wishListPage = homePage.clickWishListBtn();
         wishListPage.toggleFavBtn();
