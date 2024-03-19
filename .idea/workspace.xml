@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="dynamically add items to the wishlist and remove it from it">
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="make allure report for test runs and create steps, epics and main features for the report">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dashboard/DashboardHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dashboard/DashboardHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dashboard/DashboardSignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dashboard/DashboardSignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/OtpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/OtpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dashboardbase/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dashboardbase/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dashboardbase/TitleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dashboardbase/TitleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +66,7 @@
     "Maven.Catcher-Automation [package].executor": "Run",
     "Maven.Catcher-Automation [test].executor": "Run",
     "Maven.Catcher-Automation [verify].executor": "Run",
+    "Maven.CatcherAutomation [clean].executor": "Run",
     "Maven.CatcherAutomation [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -89,7 +77,7 @@
     "TestNG.AddToWishListTests.testCheckProductPresence.executor": "Run",
     "TestNG.BaseTest.testRelativeLocators.executor": "Run",
     "TestNG.LoginTests.testAddToWishList.executor": "Run",
-    "TestNG.SignUpTests.executor": "Debug",
+    "TestNG.SignUpTests.executor": "Run",
     "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
     "TestNG.TitleTest.getPageTitle.executor": "Run",
     "git-widget-placeholder": "main",
@@ -118,7 +106,15 @@
   <component name="QodanaIsSelectedPersistenceService">
     <option name="selectedOrLoading" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.SignUpTests.successfulSignupAndSignOut">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/target/allure-results" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.SignUpTests">
     <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -209,8 +205,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
         <item itemvalue="TestNG.SignUpTests" />
+        <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
         <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.AddToWishListTests.testCheckProductPresence" />
@@ -282,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710680216401</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="make allure report for test runs and create steps, epics and main features for the report">
+      <option name="closed" value="true" />
+      <created>1710841353727</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710841353727</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,6 +307,7 @@
     <MESSAGE value="Fix: adding to wishlist and catch the error &amp; using relative locators &amp; use a helper utils to highlight the buttons" />
     <MESSAGE value="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage" />
     <MESSAGE value="dynamically add items to the wishlist and remove it from it" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamically add items to the wishlist and remove it from it" />
+    <MESSAGE value="make allure report for test runs and create steps, epics and main features for the report" />
+    <option name="LAST_COMMIT_MESSAGE" value="make allure report for test runs and create steps, epics and main features for the report" />
   </component>
 </project>
