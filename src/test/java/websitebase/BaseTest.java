@@ -1,5 +1,6 @@
 package websitebase;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,24 +15,23 @@ import java.util.Date;
 
 public class BaseTest {
 
-    private WebDriver driver;
     protected HomePage homePage;
+    private WebDriver driver;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         driver = createWebDriverWithListener(new ChromeDriver(getChromeOptions()));
-
         homePage = goToHomePage();
     }
 
-
-    public HomePage goToHomePage(){
+    @Step("Navigate to the HomePage")
+    public HomePage goToHomePage() {
         driver.get("https://staging.catcher.sa/en");
         return new HomePage(driver);
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
@@ -41,7 +41,7 @@ public class BaseTest {
 //    }
 
     // Create a random mail using current time signature
-    public String randomEmailByTime(){
+    public String randomEmailByTime() {
         String dateFormat = "yyyyMMddHHmmss";
         String currentTime = new SimpleDateFormat(dateFormat).format(new Date());
         return "test" + currentTime + "@test.com";
@@ -49,18 +49,17 @@ public class BaseTest {
 
 
     // Add options to chrome before starting
-    private ChromeOptions getChromeOptions(){
+    private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         return options;
     }
 
-    private WebDriver createWebDriverWithListener(WebDriver driver){
+    private WebDriver createWebDriverWithListener(WebDriver driver) {
         EventListenerManger eventListener = new EventListenerManger();
         EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
         return decorator.decorate(driver);
     }
-
 
 
 }

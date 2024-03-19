@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage">
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="dynamically add items to the wishlist and remove it from it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dashboard/DashboardHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dashboard/DashboardHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dashboard/DashboardSignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dashboard/DashboardSignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/OtpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/OtpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dashboardbase/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dashboardbase/BaseTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dashboardbase/TitleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dashboardbase/TitleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +57,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Catcher-Automation-effective-pom.xml" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -56,30 +72,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Catcher-Automation [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Catcher-Automation [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Catcher-Automation [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.AddToWishListTests.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.AddToWishListTests.testAddToWishList.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.AddToWishListTests.testCheckProductPresence.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.BaseTest.testRelativeLocators.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTests.testAddToWishList.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SignUpTests.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SignUpTests.successfulSignupAndSignOut.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TitleTest.getPageTitle.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Volumes/Data/Amr's Projects/Catcher-Automation&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Catcher-Automation [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:help].executor": "Run",
+    "Maven.Catcher-Automation [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test].executor": "Run",
+    "Maven.Catcher-Automation [package].executor": "Run",
+    "Maven.Catcher-Automation [test].executor": "Run",
+    "Maven.Catcher-Automation [verify].executor": "Run",
+    "Maven.CatcherAutomation [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/websitebase/test.xml.executor": "Run",
+    "TestNG.AddToWishListTests.executor": "Run",
+    "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
+    "TestNG.AddToWishListTests.testCheckProductPresence.executor": "Run",
+    "TestNG.BaseTest.testRelativeLocators.executor": "Run",
+    "TestNG.LoginTests.testAddToWishList.executor": "Run",
+    "TestNG.SignUpTests.executor": "Debug",
+    "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
+    "TestNG.TitleTest.getPageTitle.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java",
+    "last_opened_file_path": "/Volumes/Data/Amr's Projects/Catcher-Automation",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="QodanaCloudProjectLink">
     <option name="lastReportId" value="Le5Jj" />
     <option name="linkedProjectId" value="p96wN" />
@@ -87,7 +107,18 @@
     <option name="organizationId" value="pQWOr" />
     <option name="userId" value="p0B4x" />
   </component>
-  <component name="RunManager" selected="TestNG.AddToWishListTests.testAddToWishList">
+  <component name="QodanaHighlightedReportService">
+    <option name="cloudReportPersistedInfo">
+      <CloudReportPersistedInfo>
+        <option name="projectId" value="p96wN" />
+        <option name="reportId" value="Le5Jj" />
+      </CloudReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="RunManager" selected="TestNG.SignUpTests.successfulSignupAndSignOut">
     <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -178,10 +209,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
-        <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.SignUpTests" />
+        <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
+        <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.AddToWishListTests.testCheckProductPresence" />
       </list>
     </recent_temporary>
@@ -243,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710335970352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dynamically add items to the wishlist and remove it from it">
+      <option name="closed" value="true" />
+      <created>1710680216401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710680216401</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +302,7 @@
     <MESSAGE value="Creating a cleanup to run afterMethod in wishlist test" />
     <MESSAGE value="Fix: adding to wishlist and catch the error &amp; using relative locators &amp; use a helper utils to highlight the buttons" />
     <MESSAGE value="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding and removing any product from home to the wishlist then a cleanup method to remove any products in the WishListPage" />
+    <MESSAGE value="dynamically add items to the wishlist and remove it from it" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamically add items to the wishlist and remove it from it" />
   </component>
 </project>

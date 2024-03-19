@@ -1,32 +1,30 @@
 package dashboardbase;
 
 import dashboard.DashboardSignInPage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-
-import java.time.Duration;
 
 public class BaseTests {
-    private WebDriver driver;
     protected DashboardSignInPage dashboardSignInPage;
+    private WebDriver driver;
+
+    @Step("Open the dashboard URL")
+    public DashboardSignInPage goToSignInPage() {
+        driver.get("https://staging-api.catcher.sa/admin/login");
+        return new DashboardSignInPage(driver);
+    }
 
     @BeforeClass
-    public void setUp(){
+    public void setup() {
         driver = new ChromeDriver();
-        goToSignInPage();
-        dashboardSignInPage = new DashboardSignInPage(driver);
+        dashboardSignInPage = goToSignInPage();
     }
 
-    @BeforeMethod
-    public void goToSignInPage(){
-        driver.get("https://staging-api.catcher.sa/admin/login");
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1500));
-    }
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }

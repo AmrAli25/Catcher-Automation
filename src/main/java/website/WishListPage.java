@@ -1,5 +1,6 @@
 package website;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +14,18 @@ import static utils.Helper.highlightElement;
 
 public class WishListPage {
 
+    // Variables
     private final WebDriver driver;
+    // Locators
     private final By FavBtn = By.xpath("//div[@class='cardMain-header-fav']");
     private final By listBar = By.xpath("//ul[@class='appBreadcrumbs fs-xs']/li[2]");
 
+    // Constructor
     public WishListPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    @Step("Validate product name ")
     public String getProductName(String productTitle) {
         explicitWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(listBar));
         By product = By.xpath("//a[@title='" + productTitle + "']");
@@ -32,6 +37,7 @@ public class WishListPage {
         return driver.findElement(product).getAttribute("title");
     }
 
+    @Step("Remove all items form the wishlist ")
     public void toggleFavBtn() {
         explicitWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(listBar));
         List<WebElement> elements = driver.findElements(FavBtn);
@@ -43,7 +49,7 @@ public class WishListPage {
                 explicitWait(driver, 10).until(ExpectedConditions.invisibilityOf(element));
             }
         } catch (StaleElementReferenceException e) {
-            System.out.println("OOOOOOOOOOOoOOOoooooooooooOOOOOOOOOOOoOOOoOOOOOO");
+            e.getLocalizedMessage();
         }
         System.out.println("********** All products is removed from the wishlist **********");
     }
