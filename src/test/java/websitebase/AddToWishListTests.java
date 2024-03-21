@@ -10,17 +10,19 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
+
 @Epic("Catcher Website")
 @Feature("Add Items to Wishlist")
 @Story("Add an item for Offers section to Wishlist")
 public class AddToWishListTests extends BaseTest {
+    public String email = "amr@baianat.com";
+    public String password = "123456789a";
 
     @Test(testName = "Login successfully and add products to WishList")
     @Description("Login successfully and add products to WishList")
     public void testAddToWishList() {
         var loginPage = homePage.clickLoginBtn();
-        String email = "amr@baianat.com";
-        String password = "123456789a";
+
         loginPage.enterLoginCredential(email, password);
         loginPage.clickLoginButton();
         String productName = homePage.addToWishList();
@@ -34,12 +36,27 @@ public class AddToWishListTests extends BaseTest {
         }
     }
 
+    @Test(testName = "Add to wishlist without signing in")
+    @Description("the user try to add to the wishlist before logging in and asked to login by the modal")
+    public void addToWishlistNotLoggedIn() {
+        homePage.addToWishList();
+        homePage.modalLogIn(email, password);
+        String productName = homePage.addToWishList();
+        var wishlistPage = homePage.clickWishListBtn();
+        try {
+
+            assertEquals(wishlistPage.getProductName(productName), productName, "Product wasn't added to the wishlist");
+            System.out.println(wishlistPage.getProductName(productName));
+        } catch (TimeoutException e) {
+            System.out.println("Product not found in the wishlist as it was removed from it");
+        }
+    }
+
     @AfterMethod
     @Description("Remove all the products from the wishlist")
     public void cleanWishList() {
-        goToHomePage();
-        var wishListPage = homePage.clickWishListBtn();
-        wishListPage.toggleFavBtn();
+        var wishlistPage = homePage.checkWishlistUrl();
+        wishlistPage.toggleFavBtn();
     }
 
 

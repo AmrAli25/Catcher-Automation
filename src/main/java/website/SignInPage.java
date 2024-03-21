@@ -25,7 +25,7 @@ public class SignInPage {
 
     @Step("Click Sign up button in the header")
     public SignUpPage clickSignUpBtn() {
-        explicitWait(driver, 5).until(ExpectedConditions.elementToBeClickable(signUpBtn));
+        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(signUpBtn));
         driver.findElement(signUpBtn).click();
         return new SignUpPage(driver);
     }

@@ -23,6 +23,10 @@ public class HomePage {
     private final By product = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[7]/div/div[3]/div/div[1]/div[3]/div/a");
     private final By wishListBtn = By.xpath("//a[@title='Wishlist']");
     private final By topPage = By.cssSelector("section[class='pt-2xl']");
+    private final By modalEmail = By.id("email");
+    private final By modalPassword = By.id("password");
+    private final By modalSubmit = By.cssSelector("button[type='submit']");
+    private final By popupWindow = By.cssSelector("div[class='Popup']");
     private By wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[3]/div/div/div[3]/div/div[1]/div[2]"); // xpath for product heart
 
     // Constructor
@@ -92,14 +96,22 @@ public class HomePage {
         } else return wishListBtnForProduct;
     }
 
-    // this a test to use the relative locators in selenium 4 with footer
-//    public void getPaymentMethodsFromFooter(){
-//        By catcherLogoFooter = By.xpath("//div[@class='theFooter-logo']");
-//        WebElement footerLogo = driver.findElement(catcherLogoFooter);
-//        List<WebElement> payments = driver.findElements(RelativeLocator.with(By.tagName("img")).below(footerLogo));
-//        payments.forEach(element -> highlightElement(driver,element));
-//        payments.forEach(element -> System.out.println(element.getAttribute("alt")));
-//
-//    }
+    public WishListPage checkWishlistUrl() {
+        if (driver.getCurrentUrl().contains("wishlist")) {
+            return new WishListPage(driver);
+        } else {
+            return clickWishListBtn();
+        }
+    }
+
+    @Step("Enter log in credential to the modal")
+    public HomePage modalLogIn(String email, String password) {
+        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(modalEmail));
+        driver.findElement(modalEmail).sendKeys(email);
+        driver.findElement(modalPassword).sendKeys(password);
+        driver.findElement(modalSubmit).click();
+        explicitWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(popupWindow));
+        return new HomePage(driver);
+    }
 
 }

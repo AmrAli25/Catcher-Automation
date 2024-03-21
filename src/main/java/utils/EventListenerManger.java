@@ -26,7 +26,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
-        System.out.println("Failed to do the action: " + args[0].toString());
+        
         WebDriverListener.super.onError(target, method, args, e);
     }
 

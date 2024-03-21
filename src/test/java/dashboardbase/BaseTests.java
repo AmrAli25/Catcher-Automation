@@ -4,8 +4,9 @@ import dashboard.DashboardSignInPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTests {
     protected DashboardSignInPage dashboardSignInPage;
@@ -17,14 +18,21 @@ public class BaseTests {
         return new DashboardSignInPage(driver);
     }
 
-    @BeforeClass
+    @BeforeMethod
     public void setup() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         dashboardSignInPage = goToSignInPage();
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    // Add options to chrome before starting
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        return options;
     }
 }
