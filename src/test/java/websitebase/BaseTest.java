@@ -51,7 +51,7 @@ public class BaseTest {
     // Add options to chrome before starting
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
+        options.addArguments("start-maximized","--headless=new");
         return options;
     }
 

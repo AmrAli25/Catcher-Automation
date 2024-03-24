@@ -49,17 +49,18 @@ public class HomePage {
         return new ProfilePage(driver);
     }
 
-    @Step("Validate successful login")
-    public Boolean checkSignInIcon() {
-        explicitWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(loginBtn));
-        return driver.findElement(loginBtn).isDisplayed();
-    }
+//    @Step("Validate successful login")
+//    public Boolean checkSignInIcon() {
+//        explicitWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(loginBtn));
+//        return driver.findElement(loginBtn).isDisplayed();
+//    }
 
     @Step("Scroll to element")
-    public void scrollToElement(WebElement element) {
+    public HomePage scrollToElement(WebElement element) {
         Actions actions = new Actions(driver);
         explicitWait(driver, 30).until(ExpectedConditions.elementToBeClickable(element));
         actions.scrollToElement(element).perform();
+        return this;
     }
 
     @Step("Add item to the wishlist")
@@ -83,8 +84,9 @@ public class HomePage {
         return new WishListPage(driver);
     }
 
-    private void clickElement(By element) {
+    private HomePage clickElement(By element) {
         driver.findElement(element).click();
+        return this;
     }
 
     @Step("Validate the product added to wishlist")
@@ -111,7 +113,7 @@ public class HomePage {
         driver.findElement(modalPassword).sendKeys(password);
         driver.findElement(modalSubmit).click();
         explicitWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(popupWindow));
-        return new HomePage(driver);
+        return this;
     }
 
 }

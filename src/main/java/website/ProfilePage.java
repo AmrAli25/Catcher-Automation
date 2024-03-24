@@ -3,9 +3,6 @@ package website;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import static utils.Helper.explicitWait;
 
 public class ProfilePage {
 
@@ -13,7 +10,7 @@ public class ProfilePage {
     private final By firstName = By.id("fname");
     private final By lastName = By.id("lname");
     private final By email = By.id("email");
-    private final By signOutBtn = By.cssSelector("a[title='Sign out']");
+
     // Variables
     private final WebDriver driver;
 
@@ -38,9 +35,5 @@ public class ProfilePage {
         return driver.findElement(email).getAttribute("value");
     }
 
-    @Step("Click sign out button")
-    public void clickSignOut() {
-        explicitWait(driver, 1).until(ExpectedConditions.elementToBeClickable(signOutBtn));
-        driver.findElement(signOutBtn).click();
-    }
+
 }

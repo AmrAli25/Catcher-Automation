@@ -24,20 +24,16 @@ public class SignUpPage {
     }
 
     @Step("Enter valid user credential to Sign up")
-    public void enterSignUpCredentials(String fName, String lName, String email, String password) {
+    public SignUpPage enterSignUpCredentials(String fName, String lName, String email, String password) {
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         driver.findElement(firstNameField).sendKeys(fName);
         driver.findElement(lastNameField).sendKeys(lName);
         driver.findElement(emailField).sendKeys(email);
         driver.findElement(passwordField).sendKeys(password);
-        setTermsCheckbox();
-
-    }
-
-    @Step("Check terms and conditions checkbox")
-    public void setTermsCheckbox() {
         driver.findElement(termsCheckbox).click();
+        return this;
     }
+
 
     @Step("Click submit button")
     public OtpPage clickSubmitBtn() {

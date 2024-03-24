@@ -6,7 +6,9 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.openqa.selenium.TimeoutException;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utils.TestngListener;
 
 import static org.testng.Assert.assertEquals;
 
@@ -14,6 +16,7 @@ import static org.testng.Assert.assertEquals;
 @Epic("Catcher Website")
 @Feature("Add Items to Wishlist")
 @Story("Add an item for Offers section to Wishlist")
+@Listeners(TestngListener.class)
 public class AddToWishListTests extends BaseTest {
     public String email = "amr@baianat.com";
     public String password = "123456789a";
@@ -21,10 +24,9 @@ public class AddToWishListTests extends BaseTest {
     @Test(testName = "Login successfully and add products to WishList")
     @Description("Login successfully and add products to WishList")
     public void testAddToWishList() {
-        var loginPage = homePage.clickLoginBtn();
-
-        loginPage.enterLoginCredential(email, password);
-        loginPage.clickLoginButton();
+        homePage.clickLoginBtn()
+                .enterLoginCredential(email, password)
+                .clickLoginButton();
         String productName = homePage.addToWishList();
         var wishListPage = homePage.clickWishListBtn();
         try {

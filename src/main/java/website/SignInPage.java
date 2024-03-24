@@ -31,12 +31,13 @@ public class SignInPage {
     }
 
     @Step("Enter valid user credential to login")
-    public void enterLoginCredential(String email, String password) {
+    public SignInPage enterLoginCredential(String email, String password) {
         explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(emailField));
         highlightElement(driver, driver.findElement(emailField));
         driver.findElement(emailField).sendKeys(email);
         highlightElement(driver, driver.findElement(passwordField));
         driver.findElement(passwordField).sendKeys(password);
+        return this;
     }
 
     @Step("Click login button")

@@ -38,7 +38,7 @@ public class WishListPage {
     }
 
     @Step("Remove all items form the wishlist ")
-    public void toggleFavBtn() {
+    public WishListPage toggleFavBtn() {
         explicitWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(listBar));
         List<WebElement> elements = driver.findElements(FavBtn);
         try {
@@ -52,5 +52,6 @@ public class WishListPage {
             e.getLocalizedMessage();
         }
         System.out.println("********** All products is removed from the wishlist **********");
+        return this;
     }
 }

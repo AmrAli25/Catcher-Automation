@@ -12,8 +12,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Logger;
 
 public class EventListenerManger implements WebDriverListener {
+    private static final Logger logger = Logger.getLogger(EventListenerManger.class.getName());
     @Override
     public void beforeAnyCall(Object target, Method method, Object[] args) {
         WebDriverListener.super.beforeAnyCall(target, method, args);
@@ -26,12 +28,15 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
-        
         WebDriverListener.super.onError(target, method, args, e);
     }
 
     @Override
     public void beforeAnyWebDriverCall(WebDriver driver, Method method, Object[] args) {
+//        logger.setLevel(Level.INFO);
+//        logger.info("Thread: " + Thread.currentThread().getName() +
+//                " | Method Name: " + method.getName() +
+//                " | Method Args: " + Arrays.toString(args));
         WebDriverListener.super.beforeAnyWebDriverCall(driver, method, args);
     }
 
@@ -167,7 +172,6 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforePerform(WebDriver driver, Collection<Sequence> actions) {
-//        actions.forEach(sequence -> System.out.println("Doing action:" + sequence.toString()));
         WebDriverListener.super.beforePerform(driver, actions);
     }
 
@@ -198,7 +202,7 @@ public class EventListenerManger implements WebDriverListener {
 
     @Override
     public void beforeClick(WebElement element) {
-        System.out.println("Clicking on element: " + element.getText() );
+        System.out.println("Clicking on element: " + element.getText());
         WebDriverListener.super.beforeClick(element);
     }
 
