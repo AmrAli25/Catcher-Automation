@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Add new test (Add to wishlist and login from the popup window) + refactor code for cleaning the wishlist page">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/TestngListener.java" afterDir="false" />
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Adding TestNg listeners + apply fluent POM (chaining methods)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/EventListenerManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/EventListenerManger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +120,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddToWishListTests">
+  <component name="RunManager" selected="TestNG.SignUpTests">
     <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
@@ -218,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SignUpTests" />
         <item itemvalue="TestNG.AddToWishListTests" />
         <item itemvalue="TestNG.AddToWishListTests.testAddToWishList" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
         <item itemvalue="TestNG.websitebase" />
-        <item itemvalue="TestNG.SignUpTests" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711032686669</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adding TestNg listeners + apply fluent POM (chaining methods)">
+      <option name="closed" value="true" />
+      <created>1711278574960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711278574960</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,6 +328,7 @@
     <MESSAGE value="dynamically add items to the wishlist and remove it from it" />
     <MESSAGE value="make allure report for test runs and create steps, epics and main features for the report" />
     <MESSAGE value="Add new test (Add to wishlist and login from the popup window) + refactor code for cleaning the wishlist page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new test (Add to wishlist and login from the popup window) + refactor code for cleaning the wishlist page" />
+    <MESSAGE value="Adding TestNg listeners + apply fluent POM (chaining methods)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding TestNg listeners + apply fluent POM (chaining methods)" />
   </component>
 </project>
