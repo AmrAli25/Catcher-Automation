@@ -84,6 +84,30 @@ public class HomePage {
         return new WishListPage(driver);
     }
 
+    public WishListPage checkWishlistUrl() {
+        if (driver.getCurrentUrl().contains("wishlist")) {
+            return new WishListPage(driver);
+        } else {
+            return clickWishListBtn();
+        }
+    }
+
+    @Step("Enter login credential to the modal")
+    public HomePage modalLogIn(String email, String password) {
+        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(modalEmail));
+        driver.findElement(modalEmail).sendKeys(email);
+        driver.findElement(modalPassword).sendKeys(password);
+        driver.findElement(modalSubmit).click();
+        explicitWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(popupWindow));
+        return this;
+    }
+
+    @Step("Go to All Products page ")
+    public ProductsPage gotoProductsPage(){
+        driver.navigate().to("https://staging.catcher.sa/en/products");
+        return new ProductsPage(driver);
+    }
+
     private HomePage clickElement(By element) {
         driver.findElement(element).click();
         return this;
@@ -96,24 +120,6 @@ public class HomePage {
             wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[2]/div/div[1]/div[1]/div/div[1]/div[3]");
             return wishListBtnForProduct;
         } else return wishListBtnForProduct;
-    }
-
-    public WishListPage checkWishlistUrl() {
-        if (driver.getCurrentUrl().contains("wishlist")) {
-            return new WishListPage(driver);
-        } else {
-            return clickWishListBtn();
-        }
-    }
-
-    @Step("Enter log in credential to the modal")
-    public HomePage modalLogIn(String email, String password) {
-        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(modalEmail));
-        driver.findElement(modalEmail).sendKeys(email);
-        driver.findElement(modalPassword).sendKeys(password);
-        driver.findElement(modalSubmit).click();
-        explicitWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(popupWindow));
-        return this;
     }
 
 }
