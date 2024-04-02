@@ -1,10 +1,11 @@
-package website;
+package gui;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
+import static utils.Helper.explicitWait;
 
 public class SignUpPage {
 
@@ -25,7 +26,7 @@ public class SignUpPage {
 
     @Step("Enter valid user credential to Sign up")
     public SignUpPage enterSignUpCredentials(String fName, String lName, String email, String password) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(firstNameField));
         driver.findElement(firstNameField).sendKeys(fName);
         driver.findElement(lastNameField).sendKeys(lName);
         driver.findElement(emailField).sendKeys(email);

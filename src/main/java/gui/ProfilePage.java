@@ -1,8 +1,11 @@
-package website;
+package gui;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import static utils.Helper.explicitWait;
 
 public class ProfilePage {
 
@@ -32,7 +35,10 @@ public class ProfilePage {
 
     @Step("Validate Email address")
     public String getEmail() {
-        return driver.findElement(email).getAttribute("value");
+        return explicitWait(driver, 10)
+                .until(ExpectedConditions.visibilityOfElementLocated(email))
+                .getAttribute("value");
+
     }
 
 

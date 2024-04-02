@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Catcher Website">
+
+    <test name="Catcher - GUI">
+        <classes>
+            <class name="websitebase.SignUpTests"/>
+            <class name="websitebase.AddToWishListTests"/>
+            <class name="websitebase.AddToCartTests"/>
+
+        </classes>
+    </test> <!-- Catcher - GUI -->
+
+
+</suite> <!-- Catcher Website -->

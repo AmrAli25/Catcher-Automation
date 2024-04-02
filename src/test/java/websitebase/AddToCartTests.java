@@ -17,9 +17,9 @@ import static org.testng.Assert.assertEquals;
 public class AddToCartTests extends BaseTest {
     public String productName = "ما فاي تي بي لينك M7200";
 
-    @Test(testName = "Validate adding an item to the cart")
-    @Description("Chossing an item from the Home page and adding it to the cart, checking if the item is present in the cart")
-    public void addingItemToCart(){
+    @Test(description = "Validate adding an item to the cart")
+    @Description("Choosing an item from the Home page and adding it to the cart, checking if the item is present in the cart")
+    public void addingItemToCart() {
         var title = homePage.gotoProductsPage().clickSelectedProduct(productName)
                 .addItemToCart().goToCart().getProductName();
         assertEquals(title, productName, "Something went wrong");

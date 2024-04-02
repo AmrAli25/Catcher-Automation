@@ -21,7 +21,7 @@ public class AddToWishListTests extends BaseTest {
     public String email = "amr@baianat.com";
     public String password = "123456789a";
 
-    @Test(testName = "Login successfully and add products to WishList")
+    @Test(description = "Login successfully and add products to WishList")
     @Description("Login successfully and add products to WishList")
     public void testAddToWishList() {
         homePage.clickLoginBtn()
@@ -38,7 +38,7 @@ public class AddToWishListTests extends BaseTest {
         }
     }
 
-    @Test(testName = "Add to wishlist without signing in")
+    @Test(description = "Add to wishlist without signing in")
     @Description("the user try to add to the wishlist before logging in and asked to login by the modal")
     public void addToWishlistNotLoggedIn() {
         homePage.addToWishList();

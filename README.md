@@ -1,4 +1,4 @@
-This is an automation project for an E-commerce website located in Saudi Arabia
+This is an automation project for an E-commerce gui located in Saudi Arabia
 # Project Details:
 ## Main Framework used:
 * [Selenuim Web driver](https://github.com/SeleniumHQ)<br><img height="100" title="Selenium" src="https://avatars.githubusercontent.com/u/983927?s=200&v=4">

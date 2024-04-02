@@ -1,12 +1,14 @@
-package website;
+package gui;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
 import java.util.List;
+
+import static utils.Helper.explicitWait;
 
 public class OtpPage {
 
@@ -23,7 +25,7 @@ public class OtpPage {
 
     @Step("Enter Valid OTP")
     public HomePage enterOtp(String otp) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(4000));
+        explicitWait(driver, 10).until(ExpectedConditions.elementToBeClickable(otpInput));
         List<WebElement> otpFields = driver.findElements(otpInput);
         int i = 0;
         for (WebElement otpField : otpFields) {

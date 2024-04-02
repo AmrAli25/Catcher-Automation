@@ -1,5 +1,6 @@
 package websitebase;
 
+import gui.HomePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +9,6 @@ import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.EventListenerManger;
-import website.HomePage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,11 +34,6 @@ public class BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
-//    @Test                              // this for testing relative locators using selenium 4
-//    public void testRelativeLocators(){
-//        homePage.getPaymentMethodsFromFooter();
-//    }
 
     // Create a random mail using current time signature
     public String randomEmailByTime() {
