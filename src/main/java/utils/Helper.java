@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public class Helper {
 
@@ -22,5 +24,10 @@ public class Helper {
         actions.scrollToElement(element).moveToElement(element).perform();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border='2px solid red'", element);
+    }
+
+    public static String getCurrentTimeStamp(){
+        String dateFormat = "yyyyMMddHHmmss";
+        return new SimpleDateFormat(dateFormat).format(new Date());
     }
 }

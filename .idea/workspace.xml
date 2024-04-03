@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="New test scenario --&gt; Adding a product to the cart and check if present in it">
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/catcher.xml" afterDir="false" />
+    <list default="true" id="7ba4bb81-12dd-484a-ae95-f4d4f7da7aad" name="Changes" comment="Add apache poi dependency and downgrade TestNG with adding xml to customize the test suite">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/JsonFileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/testData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/OtpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/OtpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/SingleProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/SingleProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToCartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/AddToWishListTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/websitebase/SignUpTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +91,7 @@
     "TestNG.AddToWishListTests.testAddToWishList.executor": "Run",
     "TestNG.AddToWishListTests.testCheckProductPresence.executor": "Run",
     "TestNG.BaseTest.testRelativeLocators.executor": "Run",
+    "TestNG.JsonParserTest.testGettingData.executor": "Run",
     "TestNG.LoginTests.testAddToWishList.executor": "Run",
     "TestNG.SignUpTests.executor": "Run",
     "TestNG.SignUpTests.successfulSignupAndSignOut.executor": "Run",
@@ -141,8 +135,8 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/resources/catcher.xml">
-    <configuration name="AddToCartTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddToWishListTests">
+    <configuration name="AddToWishListTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Catcher-Automation" />
       <extension name="coverage">
         <pattern>
@@ -151,7 +145,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="websitebase" />
-      <option name="MAIN_CLASS_NAME" value="websitebase.AddToCartTests" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.AddToWishListTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonParserTest.testGettingData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Catcher-Automation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JsonParserTest" />
+      <option name="METHOD_NAME" value="testGettingData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignUpTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Catcher-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="websitebase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="websitebase" />
+      <option name="MAIN_CLASS_NAME" value="websitebase.SignUpTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -187,39 +210,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Catcher-Automation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="websitebase" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Catcher-Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="websitebase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="websitebase" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddToWishListTests" />
+        <item itemvalue="TestNG.SignUpTests" />
+        <item itemvalue="TestNG.JsonParserTest.testGettingData" />
         <item itemvalue="TestNG./Volumes/Data/Amr's Projects/Catcher-Automation/src/test/java/resources/catcher.xml" />
         <item itemvalue="TestNG.SignUpTests.successfulSignupAndSignOut" />
-        <item itemvalue="TestNG.websitebase" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.AddToCartTests" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711983715453</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add apache poi dependency and downgrade TestNG with adding xml to customize the test suite">
+      <option name="closed" value="true" />
+      <created>1712068126050</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712068126050</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +357,8 @@
     <MESSAGE value="Add new test (Add to wishlist and login from the popup window) + refactor code for cleaning the wishlist page" />
     <MESSAGE value="Adding TestNg listeners + apply fluent POM (chaining methods)" />
     <MESSAGE value="New test scenario --&gt; Adding a product to the cart and check if present in it" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test scenario --&gt; Adding a product to the cart and check if present in it" />
+    <MESSAGE value="Add apache poi dependency and downgrade TestNG with adding xml to customize the test suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add apache poi dependency and downgrade TestNG with adding xml to customize the test suite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

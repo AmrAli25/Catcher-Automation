@@ -6,8 +6,10 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.openqa.selenium.TimeoutException;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utils.JsonFileManager;
 import utils.TestngListener;
 
 import static org.testng.Assert.assertEquals;
@@ -18,14 +20,14 @@ import static org.testng.Assert.assertEquals;
 @Story("Add an item for Offers section to Wishlist")
 @Listeners(TestngListener.class)
 public class AddToWishListTests extends BaseTest {
-    public String email = "amr@baianat.com";
-    public String password = "123456789a";
+     private JsonFileManager testData;
+
 
     @Test(description = "Login successfully and add products to WishList")
     @Description("Login successfully and add products to WishList")
     public void testAddToWishList() {
         homePage.clickLoginBtn()
-                .enterLoginCredential(email, password)
+                .enterLoginCredential(testData.getTestData("userLogin.email"), testData.getTestData("userLogin.password"))
                 .clickLoginButton();
         String productName = homePage.addToWishList();
         var wishListPage = homePage.clickWishListBtn();
@@ -42,7 +44,7 @@ public class AddToWishListTests extends BaseTest {
     @Description("the user try to add to the wishlist before logging in and asked to login by the modal")
     public void addToWishlistNotLoggedIn() {
         homePage.addToWishList();
-        homePage.modalLogIn(email, password);
+        homePage.modalLogIn(testData.getTestData("userLogin.email"), testData.getTestData("userLogin.password"));
         String productName = homePage.addToWishList();
         var wishlistPage = homePage.clickWishListBtn();
         try {
@@ -59,6 +61,11 @@ public class AddToWishListTests extends BaseTest {
     public void cleanWishList() {
         var wishlistPage = homePage.checkWishlistUrl();
         wishlistPage.toggleFavBtn();
+    }
+
+    @BeforeClass
+    public void classSetup() {
+        testData = new JsonFileManager("src/test/java/resources/testData.json");
     }
 
 

@@ -10,13 +10,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.EventListenerManger;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class BaseTest {
 
     protected HomePage homePage;
     private WebDriver driver;
+
 
     @BeforeMethod
     public void setUp() {
@@ -24,24 +22,24 @@ public class BaseTest {
         homePage = goToHomePage();
     }
 
-    @Step("Navigate to the HomePage")
-    public HomePage goToHomePage() {
-        driver.get("https://staging.catcher.sa/en");
-        return new HomePage(driver);
-    }
 
     @AfterMethod
     public void tearDown() {
         driver.quit();
     }
 
-    // Create a random mail using current time signature
-    public String randomEmailByTime() {
-        String dateFormat = "yyyyMMddHHmmss";
-        String currentTime = new SimpleDateFormat(dateFormat).format(new Date());
-        return "test" + currentTime + "@test.com";
+
+    @Step("Navigate to the HomePage")
+    public HomePage goToHomePage() {
+        driver.get("https://staging.catcher.sa/en");
+        return new HomePage(driver);
     }
 
+    private WebDriver createWebDriverWithListener(WebDriver driver) {
+        EventListenerManger eventListener = new EventListenerManger();
+        EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
+        return decorator.decorate(driver);
+    }
 
     // Add options to chrome before starting
     private ChromeOptions getChromeOptions() {
@@ -50,11 +48,16 @@ public class BaseTest {
         return options;
     }
 
-    private WebDriver createWebDriverWithListener(WebDriver driver) {
-        EventListenerManger eventListener = new EventListenerManger();
-        EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
-        return decorator.decorate(driver);
-    }
+    /**
+     * the follow methods was deprecated as I replaced them with a new package Utils that provide the same service
+     * with more robust design and architecture
+     */
+    // Create a random mail using current time signature
+//    public String randomEmailByTime() {
+//        String dateFormat = "yyyyMMddHHmmss";
+//        String currentTime = new SimpleDateFormat(dateFormat).format(new Date());
+//        return "test" + currentTime + "@test.com";
+//    }
 
 
 }

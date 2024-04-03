@@ -1,0 +1,14 @@
+{
+  "userSignUp": {
+    "firstName": "Ahmed",
+    "lastName": "Mohammed",
+    "email": "test",
+    "emailDomain": "gmail.com",
+    "password": "123456789a",
+    "otp": "1234"
+  },
+  "userLogin": {
+    "email": "amr@baianat.com",
+    "password": "123456789a"
+  }
+}
