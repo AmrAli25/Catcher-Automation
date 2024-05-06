@@ -15,8 +15,4 @@ This is an automation project for an e-commerce GUI located in Saudi Arabia
 ## Extras:
 * Apply best practices.
 * Continue improving the project with new technology I learn about automation testing.
-*  Next steps --> In this project I will try to achieve and support 
-    - Remote execution using (Docker-compose)
-    - Unattended execution with CI/CD tools like (Jenkins or Github actions)
-    - Parallel execution using proper test design and isolated tests
-    - Cross-platform execution (upgrading to SHAFT selenium ecosystem framework)  
+
