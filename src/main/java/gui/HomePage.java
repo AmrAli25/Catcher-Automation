@@ -20,14 +20,14 @@ public class HomePage {
     // Locators
     private final By loginBtn = By.cssSelector("a[title=\"Login\"]");
     private final By profileBtn = By.cssSelector("a[title='Profile']");
-    private final By product = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[7]/div/div[2]/div/div[1]/div[1]/div/a");
+    private final By product = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[4]/div/div[2]/div/div/div[2]/div/a");
     private final By wishListBtn = By.xpath("//a[@title='Wishlist']");
     private final By topPage = By.cssSelector("section[class='pt-2xl']");
     private final By modalEmail = By.id("email");
     private final By modalPassword = By.id("password");
     private final By modalSubmit = By.cssSelector("button[type='submit']");
     private final By popupWindow = By.cssSelector("div[class='Popup']");
-    private By wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[2]/div/div[1]/div[1]/div/div[1]/div[2]"); // xpath for product heart
+    private By wishListBtnForProduct = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[4]/div/div[2]/div/div/div[2]/div/div[1]/div[2]"); // xpath for product heart
 
     // Constructor
     public HomePage(WebDriver driver) {
@@ -104,7 +104,7 @@ public class HomePage {
 
     @Step("Go to All Products page ")
     public ProductsPage gotoProductsPage(){
-        driver.navigate().to("https://staging.catcher.sa/en/products");
+        driver.navigate().to("http://43.205.206.91/en/products");
         return new ProductsPage(driver);
     }
 
@@ -117,7 +117,7 @@ public class HomePage {
     private By offerLabelCheck(By wishListBtnForProduct) {
         String text = driver.findElement(wishListBtnForProduct).getText();
         if (text.contains("% Off")) {
-            wishListBtnForProduct = By.xpath("//div[@class='home pb-4xl']/section[7]/div/div[2]/div/div[1]/div[1]/div/div[1]/div[3]");
+            wishListBtnForProduct = By.xpath("//*[@id=\"top-of-page\"]/div[2]/div/section[4]/div/div[2]/div/div/div[2]/div/div[1]/div[3]");
             return wishListBtnForProduct;
         } else return wishListBtnForProduct;
     }

@@ -45,7 +45,7 @@ public class SignInPage {
         explicitWait(driver, 5).until(ExpectedConditions.elementToBeClickable(loginBtn));
         highlightElement(driver, driver.findElement(loginBtn));
         driver.findElement(loginBtn).click();
-        explicitWait(driver, 10).until(ExpectedConditions.urlToBe("https://staging.catcher.sa/en"));
+        explicitWait(driver, 10).until(ExpectedConditions.urlToBe("http://43.205.206.91/en"));
         return new HomePage(driver);
     }
 

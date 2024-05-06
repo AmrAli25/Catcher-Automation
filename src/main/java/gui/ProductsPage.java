@@ -44,4 +44,6 @@ public class ProductsPage {
         selectProduct(productName).click();
         return new SingleProductPage(driver);
     }
+
+     //ToDo: Build a new scenario to choose a filter and apply it to the products and check the products range
 }

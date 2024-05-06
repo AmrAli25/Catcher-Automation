@@ -31,7 +31,7 @@ public class BaseTest {
 
     @Step("Navigate to the HomePage")
     public HomePage goToHomePage() {
-        driver.get("https://staging.catcher.sa/en");
+        driver.get("http://43.205.206.91/en");
         return new HomePage(driver);
     }
 
@@ -48,10 +48,6 @@ public class BaseTest {
         return options;
     }
 
-    /**
-     * the follow methods was deprecated as I replaced them with a new package Utils that provide the same service
-     * with more robust design and architecture
-     */
     // Create a random mail using current time signature
 //    public String randomEmailByTime() {
 //        String dateFormat = "yyyyMMddHHmmss";
