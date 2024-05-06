@@ -4,6 +4,7 @@ This is an automation project for an e-commerce GUI located in Saudi Arabia
 * [Selenuim Web driver](https://github.com/SeleniumHQ)<br><img height="100" title="Selenium" src="https://avatars.githubusercontent.com/u/983927?s=200&v=4">
 * [TestNG](https://github.com/testng-team/testng) <br><img height="100" title="TestNG" src="https://avatars.githubusercontent.com/u/12528662?s=200&v=4">
 * [Allure Framework](https://github.com/allure-framework/allure2) <br><img height="100" title="Allure Framework" src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4">
+* Used JsonFileManager to enable me to apply TDD in the project as I used JSON files as test data
 
 
 ## Website used:
