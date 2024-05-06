@@ -7,7 +7,7 @@ This is an automation project for an e-commerce GUI located in Saudi Arabia
 
 
 ## Website used:
-* [Catcher](https://catcher.sa/) 
+* [Catcher](http://43.205.206.91/) 
 ## Project Design:
 * Page Object Model (POM) design pattern.
 * Fluent design approach (method chaining) for better test case readability.
@@ -15,4 +15,7 @@ This is an automation project for an e-commerce GUI located in Saudi Arabia
 ## Extras:
 * Apply best practices.
 * Continue improving the project with new technology I learn about automation testing.
+## How to run:
+* You can run it through Maven by clicking the life cycle option "Verify"
+* Or you can run it using the TestNg XML file called Catcher.xml to run the test and suits in it 
 
